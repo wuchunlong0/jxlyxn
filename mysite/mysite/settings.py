@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 """
 Django settings for mysite project.
 
@@ -111,12 +112,14 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'zh-Hans'  #修改
 TIME_ZONE = 'Asia/Shanghai' #修改
 
+
+SITE_ROOT = os.path.dirname(os.path.abspath(__file__)) #增加
+SITE_ROOT = os.path.abspath(os.path.join(SITE_ROOT, '..')) #增加
+STATIC_ROOT = os.path.join(SITE_ROOT, 'static') #增加
+
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
