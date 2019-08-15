@@ -1,0 +1,10 @@
+gevent
+gunicorn
+fabric
+markdown2
+pymysql
+django==1.11.5
+djangorestframework
+markdown 
+xlrd
+xlsxwriter

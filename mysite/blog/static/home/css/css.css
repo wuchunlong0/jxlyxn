@@ -1,0 +1,47 @@
+.myheader {
+	height:100px;
+	border-top:1px #eee solid
+}
+
+.myheader .myheader-box {
+	width:1200px;
+	margin:0 auto
+}
+
+.myheader .myheader-box .mylogo {
+	width:800px;
+	height:100px;
+	float:left;
+	overflow:hidden;
+	position:relative
+}
+
+.myheader .myheader-box .mylogo .topdesc {
+	position:absolute;
+	top:62px;
+	left:130px;
+	color:#666
+}
+.myheader .myheader-box .right-tel {
+	margin-top:15px;
+	padding-left:60px;
+	background:url(http://www.jsdanxiang.com//images/web/tel.jpg) no-repeat;
+	background-position:0 10px;
+	width:250px;
+	float:right;
+	overflow:hidden
+}
+.myheader .myheader-box .right-tel p {
+	margin:0
+}
+
+.myheader .myheader-box .right-tel p.tel-title {
+	margin:10px 0 0 0;
+	color:#666
+}
+.myheader .myheader-box .right-tel p.tel-num {
+	color:#0153a9;
+	font-size:30px;
+	font-family:"Impact"
+}
+

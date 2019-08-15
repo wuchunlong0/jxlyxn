@@ -1,0 +1,50 @@
+{% extends 'blog/__base__.html' %}
+{% block content %}
+
+<div class="content-wrapper">    
+  <section class="content">
+    
+<div class="login-box">
+  <div class="login-logo">
+    <a href="/"><b>Admin</b>LTE</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg"> 登 录</p>
+
+    <form action="/login/" method="post">
+      {% csrf_token %}
+      <div class="form-group has-feedback">
+        <input type="user" name="username" class="form-control" placeholder="Username">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <input type="text" name="href" style="display:none">
+      <div class="row">
+        <div class="col-xs-8">
+          <a href="/register/" class="text-center">还没有注册？注册</a>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+    {% if messages %} <!--messages消息 width:60px;-->
+        <div  style="color:#f00;font-size:16px; padding-left:4px;padding-top:2px;background-color:#fff; border:1px solid #ccc;word-wrap:break-word; overflow:auto;overflow-y:auto;">           
+                {% for message in messages %}
+                    <li>{{ message }}</li> 
+                {% endfor %}
+        </div>
+    {% endif %}
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+</section>
+</div>
+{% endblock %}

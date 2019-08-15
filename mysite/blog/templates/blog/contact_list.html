@@ -1,0 +1,65 @@
+{% extends 'blog/__base__.html' %}
+{% block content %}
+<div class="content-wrapper" style="background: #fff;">
+
+            <table class="table  table-bordered">
+                <thead>
+                    <tr>   <!-- bootstrap 12等份 -->
+                        <th class="col-md-1">id</th>
+                        <th class="col-md-1">姓名</th>
+                        <th class="col-md-1">邮件</th>
+                        <th class="col-md-1">电话</th>
+                        <th class="col-md-6">留言内容</th>
+                        <th class="col-md-1">时间</th>
+                        <th class="col-md-1">状态</th>                  
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for w in contacts_list %}
+                        {%  if w.status == 1 %}  
+                        <tr class="success">
+                            <td>{{w.id}} </td>
+                            <td>{{w.name}} </td>
+                            <td>{{w.email}} </td>
+                            <td>{{w.tel}} </td>
+                            <td>{{w.content}} </td>
+                            <td>{{w.date|date:"Y-m-d H:i"}} </td>
+                            <td> 已回复 </td>                         
+                            
+                        </tr>
+                        {% else %}
+                        <tr class="warning">
+                            <td>{{w.id}} </td>
+                            <td>{{w.name}} </td>
+                            <td>{{w.email}} </td>
+                            <td>{{w.tel}} </td>
+                            <td>{{w.content}} </td>
+                            <td>{{w.date|date:"Y-m-d H:i"}} </td>
+                            <td>  <a href="/blog/contact/edit/?id={{w.id}}"> 未处理 </a> </td>  
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+
+                </tbody>
+            </table>
+            
+<!--分页-->
+<div style="float: right; margin-right:28px;">
+{% if num_pages > 0 %}
+    <p>
+        {% for i in pageList %}
+            {% if i == '...' %}
+                <span>{{ i }}</span>
+            {% else %}
+                {% if i == page %}
+                    <a href="{{ i }}{{queryString}}" class="btn btn-lg btn-primary">{{ i }}</a>
+                {% else %}
+                    <a href="{{ i }}{{queryString}}" class="btn btn-lg btn-default">{{ i }}</a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </p>
+{% endif %}
+</div>
+</div>
+{% endblock %}
