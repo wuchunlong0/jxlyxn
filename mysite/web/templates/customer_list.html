@@ -18,10 +18,10 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>客户姓名</th>
-                <th>年龄</th>
-                <th>邮箱</th>
-                <th>公司</th>
+                <th>姓名</th>
+                <th>出生年月</th>
+                <th>性别</th>
+                <th>联系电话</th>
                 
                     <th>选项</th>
                
@@ -32,9 +32,9 @@
                <tr>
                     <td>{{ row.id }}</td>
                     <td>{{ row.name }}</td>
-                    <td>{{ row.age|floatformat:0 }}</td>
-                    <td>{{ row.email }}</td>
-                    <td>{{ row.company }}</td>
+                    <td>{{ row.year }}</td>
+                    <td>{{ row.sex }}</td>
+                    <td>{{ row.tel|floatformat:0 }}</td>
                     
                         <td>
                             

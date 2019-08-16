@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//mysite/web/forms/customer.py=utf-8
+encoding//mysite/web/forms/payment.py=utf-8
+encoding//mysite/web/views/payment.py=utf-8

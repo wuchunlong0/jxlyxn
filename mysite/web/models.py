@@ -7,9 +7,9 @@ class Customer(models.Model):
     客户表
     """
     name = models.CharField(verbose_name='姓名', max_length=32)
-    age = models.CharField(verbose_name='年龄', max_length=32)
-    email = models.EmailField(verbose_name='邮箱', max_length=32)
-    company = models.CharField(verbose_name='公司', max_length=32)
+    year = models.CharField(verbose_name='出生年月', max_length=32)
+    sex = models.CharField(verbose_name='性别', max_length=32)
+    tel = models.CharField(verbose_name='联系电话', max_length=32)
 
     def __str__(self):
         return self.name

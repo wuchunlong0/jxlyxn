@@ -84,10 +84,10 @@ def customer_import(request):
         # sheet = workbook.sheet_by_name('工作表1')
         sheet = workbook.sheet_by_index(0)
         row_map = {
-            0: {'text': '客户姓名', 'name': 'name'},
-            1: {'text': '年龄', 'name': 'age'},
-            2: {'text': '邮箱', 'name': 'email'},
-            3: {'text': '公司', 'name': 'company'},
+            0: {'text': '姓名', 'name': 'name'},
+            1: {'text': '出生年月', 'name': 'year'},
+            2: {'text': '性别', 'name': 'sex'},
+            3: {'text': '联系电话', 'name': 'tel'},
         }
         object_list = []
         for row_num in range(1, sheet.nrows):
