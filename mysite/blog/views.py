@@ -54,6 +54,9 @@ def company(request):
 def device(request):
     return  render(request, 'blog/device.html', context=locals())  
 
+def testing(request):
+    return  render(request, 'blog/testing.html', context=locals())  
+
 def contactus(request):
     if request.method != 'POST':
         return  render(request, 'blog/contactus.html', context=locals())  
